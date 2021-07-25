@@ -1,0 +1,10 @@
+configuration {
+    modi: "window,drun,run,ssh";
+    width:900;
+    lines: 15;
+    columns: 1;
+    font: "Mononoki 12";
+    theme: "~/.config/rofi/themes/dt-center.rasi";
+    /* theme: "~/.config/rofi/themes/denvit.rasi"; */
+
+}

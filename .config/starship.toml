@@ -1,0 +1,63 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[➜](bold red)"
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = true
+
+# Use custom format
+# format = """
+# [┌───────────────────>](bold green)
+# [│](bold green)$directory$rust$package
+# [└─>](bold green) """
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+# scan_timeout = 10
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# [shell]
+# bash_indicator = "\uf120"
+# disabled = false
+
+# [cmd_duration]
+# min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+# format = " [$duration]($style)"
+
+
+[username]
+style_user = "bold dimmed blue"
+show_always = true
+style_root = "black bold"
+format = " [$user]($style) ❯ "
+
+
+
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "bold #f57800"
+read_only = "🔒"
+read_only_style = "red"
+
+
+[conda]
+symbol = " "
+
+
+[python]
+symbol = " "
+
+
+[status]
+format = "[$symbol$status]($style)"
+symbol = "✖"
+style = "bold red"
+disabled = true
