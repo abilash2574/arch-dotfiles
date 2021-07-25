@@ -1,0 +1,6 @@
+[user]
+	name = Abilash
+	email = abilash2574@gmail.com
+[core]
+	editor = nvim
+	autocrlf = input
