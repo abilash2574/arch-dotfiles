@@ -70,6 +70,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+    " This is a note-taking Plugin!!
+    " Plug 'vimwiki/vimwiki'
     
     "
     call plug#end()

@@ -1,4 +1,4 @@
 nm-applet &
 udiskie -t &
 volumeicon &
-cbatticon &
+/* cbatticon & */

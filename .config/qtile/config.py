@@ -48,7 +48,8 @@ mod = "mod4"
 terminal = guess_terminal()
 myTerm = "alacritty"
 home = os.path.expanduser('~')
-
+file_manager = "pcmanfm"
+browser = "firefox"
 
 
 ########################################################################
@@ -204,6 +205,15 @@ keys = [
             lazy.spawn("rofi -show window"),
             desc="Opens the Rofi window prompt"
             ),
+        Key([], "f",
+            lazy.spawn(file_manager),
+            desc="Opens the PCmanfm file manager."
+            ),
+        Key([], "b",
+            lazy.spawn(browser),
+            desc="Opens the firefox browser"
+            ),
+            
     ]),
 
     # Audio
@@ -218,6 +228,26 @@ keys = [
     # Brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+
+    #ScreenShots
+    Key([], "Print",
+        lazy.spawn("scrot \"/home/zeyrie/Pictures/Screenshots/%F-@%T-scrot.png\" -e \"notify-send -u low 'Scrot' 'FullScreen taken, saved in Screenshots'\""),
+        desc='Takes a screenshot of the whole screen and saves it'
+        ),
+    Key(["control"], "Print",
+        lazy.spawn("scrot '/home/zeyrie/Pictures/Screenshots/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'  -e \"notify-send -u low 'Scrot' 'FullScreen is copied to clipboard'\""),
+        desc='Takes a screenshot of the whole screen and copies to clipboard'
+        ),
+    Key(["shift"], "Print",
+        lazy.spawn("scrot -s \"/home/zeyrie/Pictures/Screenshots/%F-@%T-scrot.png\" -e \"notify-send -u low 'Scrot' 'Selection taken, saved in Screenshots'\""),
+        desc='Takes a screenshot of a selection or window and saves it'
+        ),
+    Key(["shift", "control"], "Print",
+        lazy.spawn("scrot -s '/home/zeyrie/Pictures/Screenshots/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'  -e \"notify-send -u low 'Scrot' 'Selection is copied to clipboard'\""),
+        desc='Takes a screenshot of a selection and copies to clipboard'
+        ),
+
+
 ]
 
 groups = [Group(i) for i in "123456789"]

@@ -50,3 +50,4 @@ fi
 
 nitrogen --restore &
 picom &
+dunst &
