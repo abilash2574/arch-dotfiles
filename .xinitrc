@@ -51,3 +51,6 @@ fi
 nitrogen --restore &
 picom &
 dunst &
+
+export EDITOR='nvim'
+export VISUAL='nvim'

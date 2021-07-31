@@ -15,3 +15,6 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 " source $HOME/.config/nvim/plug-config/nerdcommenter.vim
 
+source $HOME/.config/nvim/plug-config/vim-markdown.vim
+source $HOME/.config/nvim/plug-config/markdown-preview.vim
+

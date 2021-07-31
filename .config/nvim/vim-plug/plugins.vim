@@ -73,6 +73,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " This is a note-taking Plugin!!
     " Plug 'vimwiki/vimwiki'
-    
     "
+    " For markdown preview
+    
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+    " For the markdown support in vim
+    Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+    
     call plug#end()
